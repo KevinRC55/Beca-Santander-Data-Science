@@ -40,3 +40,10 @@ list <- lapply(list, mutate, Date = as.Date(Date))
 liga_es_1720 <- do.call(rbind, list)
 
 head(liga_es_1720); tail(liga_es_1720)
+
+#============================ Guardar datos ====================================
+
+# Creación de archivo .csv con df resultante 
+write.csv(liga_es_1720, file = "../Analisis_exploratorio_de_datos/liga_es_1720.csv",
+          row.names = FALSE, col.names = TRUE) 
+
